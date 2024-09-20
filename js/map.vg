@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Global PM 2.5 (µg/m³) Concentration in 2022",
+    "width": 800,
+    "height": 400,
+    "projection": {"type": "equalEarth"},
+    "layer": [
+    {
+        "data": {"sphere": true},
+        "mark": {"type": "geoshape", "fill":"#daf2ff"}
+    },
+    {
+        "data": {
+          "graticule": {"step": [30, 30]}
+        },
+        "mark": {"type": "geoshape", "stroke": "lightgray", "strokeWidth": 0.5}
+    },
+    {
+        "data": {
+        "url":
+        "https://raw.githubusercontent.com/elke0001/FIT3179_Assignment2/refs/heads/main/Data/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature":
+        "ne_110m_admin_0_countries"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke":
+        "white"}
+        },
+    {
+        "data": {
+            "url": "https://raw.githubusercontent.com/elke0001/FIT3179_Assignment2/refs/heads/main/Data/ne_110m_admin_0_countries.topojson",
+            "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+            },
+            "transform": [
+            {
+            "lookup": "properties.ISO_A3",
+            "from": {
+            "data": {
+            "url": "https://raw.githubusercontent.com/elke0001/FIT3179_Assignment2/refs/heads/main/PMfile.csv"
+            },
+            "key": "id",
+            "fields": ["pm2022", "name"]
+            },
+            "default": null 
+            }
+                ],
+            "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
+            "encoding": {
+            "color": {
+                    "field": "pm2022",
+                    "type": "quantitative",
+                    "scale":  {
+                        "type": "threshold",
+                        "domain": [0, 10, 20, 30, 40],
+                        "range": ["#ffe000", "#ffb200", "#ff8700", "#e14800", "#ab0000", "#8d2800"]
+                                },
+                    "legend": {
+                        "title": "PM 2.5 Concentration (µg/m³)" 
+                        }
+                    },
+                    "tooltip": [
+                        {"field": "name", "type": "nominal", "title":"Country"},
+                        {"field": "pm2022", "type": "quantitative", "title":"PM 2.5"}]
+                    }
+    }]
+}
