@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+<title>Global PM 2.5 Concentration in 2022</title>
+</head>
+<body>
+<h1>World's Air Pollution</h1>
+<div id="vis">
+</div>
+
+<script type="text/javascript">
+
+    var spec2 = "js/map.vg.json";
+    vegaEmbed('#vis', spec2);
+
+  </script>
+</body>
+</html>
