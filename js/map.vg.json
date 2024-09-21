@@ -50,8 +50,8 @@
                     "type": "quantitative",
                     "scale":  {
                         "type": "threshold",
-                        "domain": [0, 10, 20, 30, 40],
-                        "range": ["#ffe000", "#ffb200", "#ff8700", "#e14800", "#ab0000", "#8d2800"]
+                        "domain": [10, 20, 30, 40],
+                        "range": ["#ffe000", "#ff8700", "#e14800", "#ab0000", "#8d2800"]
                                 },
                     "legend": {
                         "title": "PM 2.5 Concentration (µg/m³)" 
