@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Global Air Pollution</title>
+</head>
+
+<body>
+  <h1>  </h1>
+
+    <section id="outer-container">
+      <h1>Global Air Pollution</h1>
+
+        <div id="sub-title">
+          <h2>Green House Gas Emission</h2>
+        </div>
+
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+
+        <div id="sub-title">
+          <h2>Risk of Air Pollution</h2>
+        </div>
+
+        <div id="donut-container">
+            <div id="donut"></div>
+
+            <div id="text-container">
+                <p id="text">
+                  Air Pollution caused up to 23%
+                  out of all deaths thoroughout the year <strong>2000</strong> to <strong>2019</strong>. 
+                </p>
+                <p id="text">
+                  This trend underscores the 
+                  significant health burden that air pollution continues to place on the global population. Although 
+                  slight reductions have been observed, the data highlights the persistent challenge posed by air pollution.
+                </p>
+            </div>
+        </div>
+
+        <div id="sub-title">
+          <h2>GHG Emissions from Land Use and Forestry</h2>
+        </div>
+
+        <div id="sankey-container">
+          <div id="text-container">
+            <p id="text">
+              Land Use Land-Use Change and Forestry (LULUCF) emissions contribute significantly to climate change.
+            </p>
+            <p id="text">
+              The largest source of LULUCF emissions comes from deforestation, 
+              primarily in South-East Asia, Africa, and Latin America.
+            </p>
+            <p id="text">
+              The primary greenhouse gases released through LULUCF activities include 
+              carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O).
+            </p>
+          </div>
+
+          <div id="sankey-whole">
+              <div id="sankey-title">LULUCF Emissions Flow (Mt CO2eq)</div>
+              <div id="sankey-subtitle">Data measured in Mt CO2eq</div>
+              <div id="sankey"></div>
+          </div>
+
+        </div>
+
+        <div id="reference">
+          <div id="author">
+            <p>
+              <strong>Author: </strong> Elke Ie<br>
+              <strong>Date: </strong><br>
+            </p>
+          </div>
+          <div id="data">
+            <p>
+              <strong>Data Source: </strong><br>
+              <a class="link" href="https://aqli.epic.uchicago.edu/the-index/ ">AQLI</a><br>
+              <a class="link" href="https://edgar.jrc.ec.europa.eu/report_2024">European Comission</a><br>
+              <a class="link" href="https://www.kaggle.com/datasets/muhammadumairab/number-of-deaths-by-risk-factor ">Kaggle</a><br>
+            </p>
+          </div>
+        </div>
+        
+    </section>
+
+    <h1>  </h1>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@[VERSION]"></script>
+
+    <script type="text/javascript">
+        var spec2 = "js/map.vg.json";
+        vegaEmbed('#map', spec2);
+    </script>
+
+    <script type="text/javascript">
+        var spec2 = "js/donut.vg";
+        vegaEmbed('#donut', spec2);
+    </script>
+
+    <script type="text/javascript" src="js/SankeyDiagram.js"></script>
+</body>
+</html>
