@@ -1,0 +1,236 @@
+/* #vis {
+	top:100px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
+	border: none;
+} */
+
+body {
+    display: flex;                   
+    flex-direction: column;           
+    align-items: center;       
+    min-height: 100vh;               
+    margin: 0;                      
+    text-align: center;       
+    background-color: #eddacd; 
+}
+
+h1{
+    margin: 10px;
+    font-size: 80px;
+    font-family: Arial;  
+} 
+
+h2 {
+    margin: 10px; 
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;                   
+}
+
+#text-container {
+    flex-direction: column;    
+}
+
+#text {
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 20px;   
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+#label {
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 20px;   
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight: bold;  
+}
+
+#reference {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(184, 128, 94);
+    color: #ffffff;
+    text-align: left;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;  
+    width: 1050px;              
+    border-radius: 10px;  
+    justify-content: space-between;
+    align-items: center;
+}
+
+#author {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+#data {
+    text-align: right;
+    padding-right: 20px;   
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+.link{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#sub-title {
+    background-color: rgb(184, 128, 94);
+    color: #2b1f17;
+    display: flex;               
+    justify-content: center; 
+    width: 1050px;              
+    margin: 20px 0;   
+    border-radius: 10px;  
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.h-color {
+    color: rgb(203, 5, 5);
+    font-weight: bold;
+    font-size: 37px;
+}
+
+.h-nocolor {
+    color: rgb(3, 3, 3);
+    font-weight: bold;
+    font-size: 35px;
+}
+
+#outer-container {
+    background-color: #ffffff;       
+    padding: 20px; 
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1050px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    flex-direction: column; 
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#map, #donut, #sankey {
+    margin: 20px;                    
+}
+
+#map-title {
+    background-color: rgb(145, 145, 145);
+    display: flex;               
+    justify-content: center; 
+    width: 1000px;              
+    margin: 20px 0;
+    border-radius: 10px;            
+}
+
+#map-container {
+    display: flex;
+    width: 1000px;  
+    height: 850px;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+}
+
+#map {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 970px;
+}
+
+#donut-container {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;  
+    height: 400px;
+    padding-bottom: 60px;     
+    justify-content: center;       
+}
+
+#donut {
+    display: flex; 
+    flex-direction: column;  
+    justify-content: flex-start;
+    margin-left: 25px;
+}
+
+#sankey-title {
+    display: flex;               
+    justify-content: center; 
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif; 
+    padding-top: 25px;   
+}
+
+#sankey-subtitle {
+    display: flex;               
+    justify-content: center; 
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+#sankey-container {
+    display: flex;               
+    justify-content: flex-end; 
+    flex-direction: row;
+    width: 1000px;              
+    margin: 20px 0; 
+}
+
+#sankey-whole {
+    display: flex;               
+    flex-direction: column;
+}
+
+#sankey-text {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;  
+    font-family: Arial, Helvetica, sans-serif;     
+}
+
+  .container-top {
+    background-color: rgba(255, 0, 0, 0.6); /* Red with some transparency */
+    width: 300px;
+    height: 200px;
+    position: absolute; /* Positioned over the bottom container */
+    top: 0;  /* Aligns the top of this container to the top of the back container */
+    left: 0;
+    z-index: 2;
+  }
+
+  .vega-bind {
+    font-size: 19px; /* Change font size */
+    font-family: Arial, sans-serif; /* Change font style */
+    color: black; /* Change text color */
+    margin-top: 20px;
+}
+
+  #vg-tooltip-element{
+    font-size: 17px;
+    font-family: 'Arial', sans-serif;
+  }
+
+body .google-visualization-tooltip {
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+    color: black;
+    padding: 5px;
+    padding-bottom: 2px;
+}
+
+body .flow {
+    font-size: 17px;
+    font-family: 'Arial', sans-serif;
+    color: black;
+}
