@@ -7,11 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rubik+Dirt&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>Global Air Pollution</title>
@@ -21,20 +16,10 @@
   <h1>  </h1>
 
     <section id="outer-container">
-      <div id="main-title">
-      <h1>BEYOND THE SMOG</h1>
-      <h2>A Visual Journey Through Air Quality and Health</h2>
-      </div>
-      <p id="intro", style="text-align: center;">
-        Air pollution continues to be a major global health challenge 
-        to both human well-being and the environment. 
-        In light of this, let's have an in-depth exploration of air quality data, 
-        greenhouse gas emissions, and the far-reaching consequences of pollution 
-        to better address the risks posed by poor air quality.
-      </p>
+     <h1>Global Air Pollution</h1>
 
         <div id="sub-title">
-          <p>Green House Gas Emission</p>
+          <h2>Green House Gas Emission</h2>
         </div>
 
         <div id="map-container">
@@ -42,83 +27,47 @@
         </div>
 
         <div id="sub-title">
-          <p>Top 10 Country Rankings</p>
-        </div>
-
-        <div id="bump-container">
-          <div id="bump-text-container">
-            <p id="text">
-              Let's examine the ranking trends of the top 10 countries over the past two decades.
-            </p>
-            <p id="text">
-              <span style="color: #4986c4; font-size: 27px; font-weight: bold;">Bangladesh</span>
-              was consistently on the
-              <span style="font-weight: bold; font-size: 25px;">1st</span> position,
-              having <span style="font-weight: bold; font-size: 25px;">54.17µg/m³</span> 2.5PM Value in <strong>2022</strong>.
-            </p>
-              <p id="text">
-                <span style="color: #e33d3d; font-size: 27px; font-weight: bold;">India </span> 
-                which used to be on the 4th postion in 2000 went up to the <span style="font-weight: bold; font-size: 25px;">2nd position</span> 
-                in <strong>2022</strong>
-                replacing <span style="color: #9966CC; font-size: 27px; font-weight: bold;">Nepal</span>.
-              </p>
-              <p id="text", style="margin-bottom: 20px;">
-                <span style="color: #a6550d; font-size: 27px; font-weight: bold;">Qatar </span> 
-                jump to <span style="font-weight: bold; font-size: 25px;">top 5</span> 
-                after being on the 9th position in 2000.
-              </p>
-          </div>
-          <div id="bump"></div>
-      </div>
-
-        <div id="sub-title">
-          <p>Risk of Air Pollution</p>
+<h2>Risk of Air Pollution</h2>
         </div>
 
         <div id="donut-container">
             <div id="donut"></div>
 
-            <div id="text-container", style="margin-right: 30px;">
-              <p id="text", style="margin-top: 100px;">
-                Ever wondered how much impact air pollution truly has on global health?
-              </p>
-              <p id="text">
-                <span style="font-weight: bold; font-size: 25px;">Air Pollution</span> contributed to as much as <span class="h-color">23%</span>
-                out of all deaths between <strong>2000</strong> and <strong>2019</strong>.
-              </p>
-                <p id="text", style="margin-bottom: 30px;">
-                  Although a <strong>slight reductions</strong> have been observed during this 
-                  <span style="color: rgb(1, 1, 1); font-size: 27px; font-weight: bold;">19 years </span>period,
-                  this trend still underscores the 
-                  significant health concern that air pollution maintain to place on the global population.
+            <div id="text-container">
+                <p id="text">
+                  Air Pollution caused up to 23%
+                  out of all deaths thoroughout the year <strong>2000</strong> to <strong>2019</strong>. 
+                </p>
+                <p id="text">
+                  This trend underscores the 
+                  significant health burden that air pollution continues to place on the global population. Although 
+                  slight reductions have been observed, the data highlights the persistent challenge posed by air pollution.
                 </p>
             </div>
         </div>
 
         <div id="sub-title">
-          <p>Gas Emissions from Land Use and Forestry</p>
+          <h2>GHG Emissions from Land Use and Forestry</h2>
         </div>
 
         <div id="sankey-container">
-          <div id="text-container", style="margin-right: 20px;">
-            <p id="text", style="margin-top: 85px;">
-              <strong>Land Use Land-Use Change and Forestry (LULUCF)</strong> emissions has been contributing significantly to climate change.
+          <div id="text-container">
+            <p id="text">
+              Land Use Land-Use Change and Forestry (LULUCF) emissions contribute significantly to climate change.
             </p>
             <p id="text">
-              The largest source of LULUCF emissions comes from <span style="color: rgb(234, 0, 0); font-size: 27px; font-weight: bold;">deforestation</span>, 
-              primarily in <span style="color: rgb(239, 144, 0); font-size: 25px; font-weight: bold;">South-East Asia</span>, 
-              <span style="color: rgb(218, 0, 0); font-size: 25px; font-weight: bold;">Africa</span>, and 
-              <span style="color: rgb(234, 226, 10); font-size: 25px; font-weight: bold;">Latin America</span>.
+              The largest source of LULUCF emissions comes from deforestation, 
+              primarily in South-East Asia, Africa, and Latin America.
             </p>
             <p id="text">
-              The primary greenhouse gases released through LULUCF activities is
-              <span style="color: rgb(46, 51, 200); font-size: 27px; font-weight: bold;">carbon dioxide (CO2)</span>.
+              The primary greenhouse gases released through LULUCF activities include 
+              carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O).
             </p>
           </div>
 
           <div id="sankey-whole">
               <div id="sankey-title">LULUCF Emissions Flow (Mt CO2eq)</div>
-              <div id="sankey-subtitle">Data measured in million tons of CO2 equivalent</div>
+              <div id="sankey-subtitle">Data measured in Mt CO2eq</div>
               <div id="sankey"></div>
           </div>
 
@@ -149,14 +98,7 @@
 
     <script type="text/javascript">
         var spec2 = "js/map.vg.json";
-        vegaEmbed('#map', spec2,{
-          "autosize": { "type": 'fit', "contains": 'padding' }}
-        );
-    </script>
-
-    <script type="text/javascript">
-      var spec2 = "js/bump.vg.json";
-      vegaEmbed('#bump', spec2);
+        vegaEmbed('#map', spec2);
     </script>
 
     <script type="text/javascript">
