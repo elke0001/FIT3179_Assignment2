@@ -511,7 +511,7 @@
                             "color": {
                               "field": "Sector", 
                               "scale": {
-                                "range": ["#686aff", "#fee251", "#ffc125", "#80c9e8", "#9880e8", "#ffddbf", "#fe5151", "#ffbff0"]
+                                "range": ["#4047d3", "#fee251", "#ffc125", "#80c9e8", "#9880e8", "#ffddbf", "#fe5151", "#ffbff0"]
                               },
                               "legend": {
                                 "labelFontSize": 13,
